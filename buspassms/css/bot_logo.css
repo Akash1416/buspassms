@@ -1,0 +1,18 @@
+/* Add this to _sidebar.css */
+
+.sidebar-bottom {
+    position: fixed;
+    bottom: 350px;
+    left: 1600px;
+    width: 100%;
+    z-index: 10;
+}
+
+
+.sidebar-bottom .chatbot-logo {
+    max-width: 80px; /* Adjust as needed */
+}
+
+.chatbot-logo:hover{
+    transform: scale(1.1);
+}
