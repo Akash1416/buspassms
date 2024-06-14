@@ -1,16 +1,20 @@
-<?php 
+<?php
 // DB credentials.
-define('DB_HOST','localhost');
-define('DB_USER','root');
-define('DB_PASS','');
-define('DB_NAME','buspassdb');
+define('DB_SERVER', 'your_server.database.windows.net');
+define('DB_DATABASE', 'your_database');
+define('DB_USER', 'your_username');
+define('DB_PASS', 'your_password');
+
 // Establish database connection.
 try
 {
-$dbh = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME,DB_USER, DB_PASS,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
+    $dbh = new PDO("sqlsrv:server=" . DB_SERVER . ";Database=" . DB_DATABASE, DB_USER, DB_PASS);
+    // Set the PDO error mode to exception
+    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Connected successfully";
 }
 catch (PDOException $e)
 {
-exit("Error: " . $e->getMessage());
+    exit("Error: " . $e->getMessage());
 }
 ?>
