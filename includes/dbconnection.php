@@ -1,9 +1,9 @@
 <?php
 // DB credentials.
-define('DB_SERVER', 'your_server.database.windows.net');
-define('DB_DATABASE', 'your_database');
-define('DB_USER', 'your_username');
-define('DB_PASS', 'your_password');
+define('DB_SERVER', 'buspass.database.windows.net');
+define('DB_DATABASE', 'buspass');
+define('DB_USER', 'azureuser');
+define('DB_PASS', 'Azure@123456');
 
 // Establish database connection.
 try
